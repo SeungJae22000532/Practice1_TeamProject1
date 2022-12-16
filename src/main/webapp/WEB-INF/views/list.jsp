@@ -21,7 +21,7 @@
     <body>
         <header class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
             <div class="d-flex justify-content-between">
-                <a class="navbar-brand mr-auto" href="#">Contact-info Service</a>
+                <a class="navbar-brand mr-auto" href="list">Contact-info Service</a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <form role="search" class="d-flex" action="search" method="post">
                         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="subject">

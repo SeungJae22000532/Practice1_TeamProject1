@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Contact">
+    <insert id="insertContact">
+        insert into CONTACT (subject, pName, tName, pMail, tMail, zAddress, office)
+        values (#{subject}, #{pName}, #{tName}, #{pMail}, #{tMail}, #{zAddress}, #{office})
+    </insert>
+    <update id="updateContact">
+        update CONTACT
+        set subject=#{subject}, pName=#{pName}, tName=#{tName}, pMail=#{pMail}, tMail=#{tMail}, zAddress=#{zAddress}, office=#{office}
+        where seq=#{seq}
+    </update>
+    <delete id="deleteContact">
+        delete from CONTACT where seq=#{seq}
+    </delete>
+    <select id="getContact" resultType="contact">
+        select * from CONTACT where seq=#{seq}
+    </select>
+    <select id="getContactList" resultType="contact">
+        select * from CONTACT order by seq desc
+    </select>
+    <select id="getSearchContact" resultType="contact">
+        select * from CONTACT where subject like CONCAT('%', #{subject}, '%')
+    </select>
+</mapper>

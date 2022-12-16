@@ -3,6 +3,6 @@
 <html>
 <body>
 <h2>Welcome to our(Haeun and Seungjae) CONTACT page</h2>
-<p><a href="board/list">Go to list page</a> </p>
+<p><a href="contact/list">Go to list page</a> </p>
 </body>
 </html>
